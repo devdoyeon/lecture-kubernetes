@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vl-webserver
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: vl-webserver
+        image: nginx:1.14
+        volumeMounts:
+        - mountPath: /var/local/data
+          name: mydir
+        - mountPath: /var/local/data/1.txt
+          name: myfile
+      volumes:
+      - name: mydir
+        hostPath:
+          path: /var/local/data
+          type: DirectoryOrCreate
+      - name: myfile
+        hostPath:
+          path: /var/local/data/1.txt
+          type: FileOrCreate

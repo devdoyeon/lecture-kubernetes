@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: st-nginx
+spec:
+  selector:
+    matchLabels:
+      app: st-nginx
+  replicas: 3
+  serviceName: st-nginx
+  podManagementPolicy: OrderedReady
+  template:
+    metadata:
+      labels:
+        app: st-nginx
+    spec:
+      containers:
+      - name: st-nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: pvc-volume
+      volumes:
+      - name: pvc-volume
+        persistentVolumeClaim:
+          claimName: nfs-pvc
