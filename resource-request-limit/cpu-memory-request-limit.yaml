@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-memory-demo
+spec:
+  containers:
+  - name: cpu-memory-demo-ctr
+    image: ubuntu:24.04 
+    command:
+    - sleep
+    - "360000"
+    resources:
+      limits:
+        cpu: "2"
+        memory: "5Mi"
+      requests:
+        cpu: "0.1"
+        memory: "5Mi"

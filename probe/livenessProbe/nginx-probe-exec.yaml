@@ -8,20 +8,20 @@ spec:
     name: nginx-probe-exec
     volumeMounts:
     - mountPath: /data
-      name: host-storage
+      name: directory
     - mountPath: /data/check.txt
-      name: check-txt
+      name: file
     livenessProbe:
       exec:
         command:
         - ls
         - /data/check.txt
   volumes:
-  - name: host-storage
+  - name: directory 
     hostPath:
       path: /data
       type: DirectoryOrCreate
-  - name: check-txt
+  - name: file
     hostPath:
       path: /data/check.txt
       type: FileOrCreate
