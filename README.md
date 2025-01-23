@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/53535514-c0d5-4349-ad23-c6a1f51538d8)
+
 ```
 Kubernetes Cluster
 └── master.labs.local (Master Node)
@@ -6,7 +8,7 @@ Kubernetes Cluster
     └── node3.labs.local (Worker Node)
 ```
 
-위 구조를 가진 클러스터로 공부 중입니다.
+VMWare로 위 구조를 가진 클러스터를 활용해 공부 중입니다.
 <br/>
 <br/>
 https://doyeonyou.notion.site/Kubernetes-1815796685d480199213ffd6afe4c10b?pvs=4
