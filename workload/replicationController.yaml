@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    app: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14
+        ports:
+        - containerPort: 80
+
+# selector = 라벨이 app: nginx인 Pod를 관리
+# 따라서 spec.template에서 Pod의 Label을 app: nginx로 설정하면
+# selector가 해당 라벨을 찾아 관리해 준다.
+#
+# 따로 라벨이 app: nginx인 Pod를 만들어도 컨트롤러에서 replicas를 3으로 설정했기 때문에
+# 따로 만든 Pod는 자동으로 사라진다.
+#
+# spec = ReplicationController 설정
+# spec.template = Pod 설정
+# spec.template.spec.containers = Container 설정
