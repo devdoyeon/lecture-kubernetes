@@ -11,7 +11,7 @@ spec:
   storageClassName: manual
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-   server: 192.168.108.20
+   server: 10.10.8.3 
    path: /html
 ---
 apiVersion: v1
