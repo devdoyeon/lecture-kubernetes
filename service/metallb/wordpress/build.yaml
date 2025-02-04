@@ -69,7 +69,7 @@ spec:
     storage: 5Gi
   nfs:
     path: /html
-    server: 192.168.108.3
+    server: 10.10.8.3
   persistentVolumeReclaimPolicy: Delete
   storageClassName: pv-wordpress
   volumeMode: Filesystem
@@ -184,7 +184,7 @@ spec:
             secretKeyRef:
               key: password
               name: mysql-pass
-        image: mysql:8.0.41-debian
+        image: mysql
         name: mysql
         ports:
         - containerPort: 3306
