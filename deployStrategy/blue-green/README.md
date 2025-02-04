@@ -1,4 +1,4 @@
-<code>
+```
 $ kubectl apply -f blue.yaml
 $ kubectl describe services test-service
 
@@ -38,4 +38,4 @@ $ kubectl descirbe services test-service
  Endpoints:         10.36.0.2:8080,10.36.0.3:8080,10.42.0.2:8080 + 1 more... 
  Session Affinity:  None 
  Events:            <none> 
-</code>
+```
