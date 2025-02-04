@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ser-nginx
+spec:
+  type: ClusterIP
+  clusterIP: 10.99.0.1
+  selector:
+    app: nginx #동일 App Label Pods
+  ports:
+  - protocol: TCP
+    port: 80 # cluster Port
+    targetPort: 80 # container Port

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-loadbalancer
+  labels:
+    app: metallb
+  namespace: metallb-system
+spec:
+  type: LoadBalancer
+  selector:
+    app: metallb
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
