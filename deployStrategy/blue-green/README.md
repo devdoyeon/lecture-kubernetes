@@ -6,7 +6,7 @@ $ kubectl describe services test-service
  Namespace:         default 
  Labels:            <none> 
  Annotations:       <none> 
- Selector:          app=test-pod,  color=blue 
+ Selector:          app=test-pod,  **color=blue** 
  Type:              ClusterIP 
  IP Family Policy:  SingleStack 
  IP Families:       IPv4 
@@ -27,7 +27,7 @@ $ kubectl descirbe services test-service
  Namespace:         default 
  Labels:            <none> 
  Annotations:       <none> 
- Selector:          app=test-pod,  color=green 
+ Selector:          app=test-pod,  **color=green**
  Type:              ClusterIP 
  IP Family Policy:  SingleStack 
  IP Families:       IPv4 
