@@ -1,0 +1,20 @@
+apiVersion: batch/v1 
+kind: Job 
+metadata: 
+  name: job-example 
+spec: 
+  completions: 5 # 5번 성공적으로 완료되면 job 마침 
+  parallelism: 2 # 동시 Pod를 2개 실행 및 유지 
+  activeDeadlineSeconds: 40 # 작업이 40초내에 마치지 않으면 강제로끝냄 
+  template: 
+    spec: 
+      containers: 
+      - name: ubuntu2204 
+        image: ubuntu:22.04 
+        command: ["bash"] 
+        args: 
+        - "-c" 
+        - "echo 'Hello world' ; sleep 30 ; echo 'Bye' " 
+  #      restartPolicy: Never #컨테이너를 종료한 후 다시 시작하지 않음 
+      restartPolicy: OnFailure #Job 실패하면 Container 재실행 
+  backoffLimit: 6 #기본값 OnFailure때 Container 재실행 횟수 제한

@@ -1,0 +1,20 @@
+apiVersion: batch/v1 
+kind: CronJob 
+metadata: 
+  name: cronjob-example 
+spec: 
+  schedule: "* * * * *" 
+  startingDeadlineSeconds: 300 
+  concurrencyPolicy: Forbid #default is allow 
+  jobTemplate: 
+    spec: 
+      template: 
+        spec: 
+          containers: 
+          - name: nginx-container 
+            image: nginx:1.14 
+            command: 
+            - /bin/bash 
+            - -c 
+            - date; echo 'Hello world' ; sleep 30; echo Bye 
+          restartPolicy: Never #locate in the same line with container
