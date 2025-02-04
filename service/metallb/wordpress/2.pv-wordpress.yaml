@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: PersistentVolume 
+metadata: 
+  name: pv-wordpress 
+spec: 
+  capacity: 
+    storage: 5Gi 
+  volumeMode: Filesystem 
+  accessModes: 
+    - ReadWriteMany 
+  storageClassName: pv-wordpress 
+  persistentVolumeReclaimPolicy: Delete 
+  nfs: 
+    server: 192.168.108.3 
+    path: /html

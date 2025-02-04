@@ -1,0 +1,7 @@
+resources: 
+  - 0.namespace.yaml 
+  - 1.pv-mysql.yaml 
+  - 2.pv-wordpress.yaml 
+  - 3.secret.yaml 
+  - 4.mysql-deploy.yaml 
+  - 5.wordpress-deploy.yaml 
