@@ -119,13 +119,13 @@ $ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg 
   --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
 # Kubernetes 패키지 저장소를 APT 소스 목록에 추가
-$ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+$ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 $ apt update
 $ apt-cache madison kubeadm
 
 # 위 과정에서 찾은 버전을 아래에 적용
-$ apt install -y kubelet=1.30.9-1.1 kubeadm=1.30.9-1.1 kubectl=1.30.9-1.1
+$ apt install -y kubelet=1.32.1-1.1 kubeadm=1.32.1-1.1 kubectl=1.32.1-1.1
 
 # 패키지의 버전이 자동으로 업데이트 되지 않도록 고정
 $ apt-mark hold kubelet kubeadm kubectl
