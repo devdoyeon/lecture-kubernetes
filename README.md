@@ -115,7 +115,7 @@ $ apt-get install -y apt-transport-https ca-certificates curl gpg
 
 # Kubernetes 패키지 저장소의 GPG 키를 다운로드하고, 다운로드한 키를 이진 형식으로 변환 후
 # 변환된 키를 APT가 사용할 수 있는 위치에 저장한다.
-$ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg \ 
+$ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg \ 
   --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
 # Kubernetes 패키지 저장소를 APT 소스 목록에 추가
@@ -199,8 +199,8 @@ $ kubectl get all -n kube-system
 # Worker Node의 등록 상태 확인
 $ kubectl get nodes
 # NAME                STATUS   ROLES           AGE   VERSION
-# master.labs.local   Ready    control-plane   16d   v1.30.9
-# node1.labs.local    Ready    <none>          16d   v1.30.9
-# node2.labs.local    Ready    <none>          16d   v1.30.9
-# node3.labs.local    Ready    <none>          16d   v1.30.9
+# master.labs.local   Ready    control-plane   16d   v1.32.1
+# node1.labs.local    Ready    <none>          16d   v1.32.1
+# node2.labs.local    Ready    <none>          16d   v1.32.1
+# node3.labs.local    Ready    <none>          16d   v1.32.1
 ```
