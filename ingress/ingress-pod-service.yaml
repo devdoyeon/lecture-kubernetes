@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-main
+  namespace: ingress-nginx
   labels:
     category: mainurl
 spec:
@@ -16,6 +17,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: svc-mainurl
+  namespace: ingress-nginx
 spec:
   selector:
     category: mainurl
@@ -26,6 +28,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-shopping
+  namespace: ingress-nginx
   labels:
     category: shopping
 spec:
@@ -40,6 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: svc-shopping
+  namespace: ingress-nginx
 spec:
   selector:
     category: shopping
@@ -50,6 +54,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-customer
+  namespace: ingress-nginx
   labels:
     category: customer
 spec:
@@ -64,6 +69,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: svc-customer
+  namespace: ingress-nginx
 spec:
   selector:
     category: customer
@@ -74,6 +80,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-order
+  namespace: ingress-nginx
   labels:
     category: order
 spec:
@@ -88,6 +95,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: svc-order
+  namespace: ingress-nginx
 spec:
   selector:
     category: order

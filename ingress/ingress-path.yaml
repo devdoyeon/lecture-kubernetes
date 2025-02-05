@@ -15,21 +15,21 @@ spec:
             name: svc-mainurl
             port:
               number: 80
-      - path: /shopping
+      - path: /shopping/
         pathType: Prefix
         backend:
           service:
             name: svc-shopping
             port:
               number: 80
-      - path: /customer
+      - path: /customer/
         pathType: Prefix
         backend:
           service:
             name: svc-customer
             port:
               number: 80
-      - path: /order
+      - path: /order/
         pathType: Prefix
         backend:
           service:
