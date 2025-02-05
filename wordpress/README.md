@@ -27,7 +27,7 @@ $ apt update -y
 <br>
 
 # kustomize
-kustomize 활용해서 build.yaml 파일 만들기기
+kustomize 활용해서 build.yaml 파일 만들기
 
 ```
 kubectl kustomize . -o build.yaml
