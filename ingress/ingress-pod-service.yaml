@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-main
+  labels:
+    category: mainurl
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-mainurl
+spec:
+  selector:
+    category: mainurl
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-shopping
+  labels:
+    category: shopping
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-shopping
+spec:
+  selector:
+    category: shopping
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-customer
+  labels:
+    category: customer
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-customer
+spec:
+  selector:
+    category: customer
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-order
+  labels:
+    category: order
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-order
+spec:
+  selector:
+    category: order
+  ports:
+  - port: 80
+
