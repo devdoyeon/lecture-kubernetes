@@ -1,6 +1,5 @@
 ```
-$ kubectl cp index.html ingress-nginx/pod-customer:/usr/share/nginx/html/index.html
-$ kubectl exec pod-customer -n ingress-nginx -- cat /usr/share/nginx/html/index.html
+$ kubectl exec pod-customer -n ingress-nginx -- cat /usr/share/nginx/html/customer/index.html
 
 <html>
         <head>
