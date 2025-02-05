@@ -137,7 +137,7 @@ $ systemctl enable --now kubelet
 >[!Note]
 >1. master.labs.local 시스템을 끈다.
 >2. VMWare에서 Full Clone으로 `node1.labs.local`, `node2.labs.local`, `node3.labs.local`을 생성한다.
->3. node1, node2, node3의 `/etc/netplan/50-cloud-init.yaml` 파일의 IP를 각각 3, 4, 5로 변경한다.
+>3. node1, node2, node3의 `/etc/netplan/50-cloud-init.yaml` 파일의 IP를 각각 4, 5, 6으로 변경한다.
 >4. node1, node2, node3에서 `sudo hostnamectl set-hostname node{n}.labs.local`로 호스트 네임을 변경한다.
 >5. node1, node2, node3를 reboot한다.
 ---
