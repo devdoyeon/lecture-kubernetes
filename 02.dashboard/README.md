@@ -37,6 +37,6 @@ $ kubectl edit deploy kubernetes-dashboard -n kubernetes-dashboard
 # 플래그를 추가한다. ttl을 0으로 주면 만료되지 않는다.
 
 # admin-user token 만료 시간 설정
-$ kubectl -n kubernetes-dashboard create token admin-user --duration 720 > ./admin-token
+$ kubectl -n kubernetes-dashboard create token admin-user --duration 720h > ./admin-token
 # 720시간 후에 만료되는 토큰이 admin-token 파일에 담긴다.
 ```
