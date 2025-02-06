@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: main-config
+data:
+  index.html: |
+    <html>
+      <head>
+      <title>Main Page</title>
+      </head>
+      <body>
+        <p><h1>This page name is the main</h1><br>
+        <a href="http://10.10.8.101/order/">order</a><br>
+        <a href="http://10.10.8.101/shopping/">shopping</a><br>
+        <a href="http://10.10.8.101/customer/">customer</a><br>
+        <a href="http://10.10.8.101/">HOME</a>
+      </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shopping-config
+data:
+  index.html: |
+    <html>
+      <head>
+      <title>Shopping Page</title>
+      </head>
+      <body>
+        <p><h1>This page name is the Shopping</h1><br>
+        <a href="http://10.10.8.101/order/">order</a><br>
+        <a href="http://10.10.8.101/shopping/">shopping</a><br>
+        <a href="http://10.10.8.101/customer/">customer</a><br>
+        <a href="http://10.10.8.101/">HOME</a>
+      </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customer-config
+data:
+  index.html: |
+    <html>
+      <head>
+      <title>Customer Page</title>
+      </head>
+      <body>
+        <p><h1>This page name is the Customer</h1><br>
+        <a href="http://10.10.8.101/order/">order</a><br>
+        <a href="http://10.10.8.101/shopping/">shopping</a><br>
+        <a href="http://10.10.8.101/customer/">customer</a><br>
+        <a href="http://10.10.8.101/">HOME</a>
+      </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-config
+data:
+  index.html: |
+    <html>
+      <head>
+      <title>Order Page</title>
+      </head>
+      <body>
+        <p><h1>This page name is the Order</h1><br>
+        <a href="http://10.10.8.101/order/">order</a><br>
+        <a href="http://10.10.8.101/shopping/">shopping</a><br>
+        <a href="http://10.10.8.101/customer/">customer</a><br>
+        <a href="http://10.10.8.101/">HOME</a>
+      </body>
+    </html>

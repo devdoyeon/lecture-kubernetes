@@ -1,0 +1,136 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-main
+  labels:
+    category: mainurl
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    volumeMounts:
+    - name: html-volume
+      mountPath: /usr/share/nginx/html
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  volumes:
+  - name: html-volume
+    configMap: 
+      name: main-config
+      items:
+      - key: index.html
+        path: index.html
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-mainurl
+spec:
+  selector:
+    category: mainurl
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-shopping
+  labels:
+    category: shopping
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    volumeMounts:
+    - name: html-volume
+      mountPath: /usr/share/nginx/html/shopping
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  volumes:
+  - name: html-volume
+    configMap:
+      name: shopping-config
+      items:
+      - key: index.html
+        path: index.html
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-shopping
+spec:
+  selector:
+    category: shopping
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-customer
+  labels:
+    category: customer
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    volumeMounts:
+    - name: html-volume
+      mountPath: /usr/share/nginx/html/customer
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  volumes:
+  - name: html-volume
+    configMap:
+      name: customer-config
+      items:
+      - key: index.html
+        path: index.html
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-customer
+spec:
+  selector:
+    category: customer
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-order
+  labels:
+    category: order
+spec:
+  containers:
+  - name: container
+    image: nginx:latest
+    volumeMounts:
+    - name: html-volume
+      mountPath: /usr/share/nginx/html/order
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  volumes:
+  - name: html-volume
+    configMap:
+      name: order-config
+      items:
+      - key: index.html
+        path: index.html
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-order
+spec:
+  selector:
+    category: order
+  ports:
+  - port: 80
+

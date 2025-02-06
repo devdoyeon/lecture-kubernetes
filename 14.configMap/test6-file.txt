@@ -1,0 +1,2 @@
+MYSQL_ROOT_PASSWORD=dkagh1.
+MYSQL_DATABASE=kubernetes
