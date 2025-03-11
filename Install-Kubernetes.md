@@ -192,9 +192,17 @@ alias를 추가하면 된다.
 # .bashrc 파일 오픈
 $ vi ~/.bashrc
 
-# .bashrc 파일 내에 alias 명령어 추가
-$ alias k='kubectl'
+# .bashrc 파일 내에 alias 명령어 추가하고 :wq 해서 빠져나오기
+# alias k='kubectl'
 
 # 변경 사항 적용
 $ source ~/.bashrc
+
+# k로 kubectl 작동되는지 확인해 보기
+$ k get nodes
+NAME                STATUS   ROLES           AGE     VERSION
+master.labs.local   Ready    control-plane   9m28s   v1.32.1
+node1.labs.local    Ready    <none>          4m10s   v1.32.1
+node2.labs.local    Ready    <none>          4m11s   v1.32.1
+node3.labs.local    Ready    <none>          4m14s   v1.32.1
 ```
