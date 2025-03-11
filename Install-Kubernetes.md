@@ -185,3 +185,16 @@ $ kubectl get nodes
 # node2.labs.local    Ready    <none>          16d   v1.32.1
 # node3.labs.local    Ready    <none>          16d   v1.32.1
 ```
+
+## kubectl을 k로 실행하기
+alias를 추가하면 된다.
+```bash
+# .bashrc 파일 오픈
+$ vi ~/.bashrc
+
+# .bashrc 파일 내에 alias 명령어 추가
+$ alias k='kubectl'
+
+# 변경 사항 적용
+$ source ~/.bashrc
+```
