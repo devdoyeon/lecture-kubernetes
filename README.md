@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/53535514-c0d5-4349-ad23-c6a1f51538d8)
+![image](https://github.com/user-attachments/assets/3ede4a19-f93d-4752-9b59-113a3d6daedd)
+
 
 ```
 Kubernetes Cluster
