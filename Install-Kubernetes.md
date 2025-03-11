@@ -200,9 +200,9 @@ $ source ~/.bashrc
 
 # k로 kubectl 작동되는지 확인해 보기
 $ k get nodes
-NAME                STATUS   ROLES           AGE     VERSION
-master.labs.local   Ready    control-plane   9m28s   v1.32.1
-node1.labs.local    Ready    <none>          4m10s   v1.32.1
-node2.labs.local    Ready    <none>          4m11s   v1.32.1
-node3.labs.local    Ready    <none>          4m14s   v1.32.1
+# NAME                STATUS   ROLES           AGE     VERSION
+# master.labs.local   Ready    control-plane   9m28s   v1.32.1
+# node1.labs.local    Ready    <none>          4m10s   v1.32.1
+# node2.labs.local    Ready    <none>          4m11s   v1.32.1
+# node3.labs.local    Ready    <none>          4m14s   v1.32.1
 ```
